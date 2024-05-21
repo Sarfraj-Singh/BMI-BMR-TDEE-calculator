@@ -1,0 +1,236 @@
+body {
+    font-family: 'Futura', sans-serif;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers (e.g., Chrome, Safari) */
+}
+
+.container {
+    font-size: 1.2rem;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 90vw;
+    min-width: 300px;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+    overflow-y: auto;
+    max-height: calc(100vh - 40px); /* Adjusted for padding */
+}
+
+#explanation {
+    display: none;
+    color: #000000;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle {
+    margin-top: 20px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.theme-toggle img {
+    width: 30px;
+    height: 30px;
+}
+
+#learn {
+    position: sticky;
+    top: 0px;
+    margin-top: 5px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#learn img {
+    width: 30px;
+    height: 30px;
+}
+
+.theme-toggle:hover, #learn:hover {
+    box-shadow: 0 0 15px var(--shadow-hover-color);
+    transform: translateY(-3px);
+}
+
+.input, .select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode #explanation {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode .theme-toggle {
+    background-color: #ffffff;
+}
+
+body.dark-mode .input, body.dark-mode .select {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #555;
+}
+
+body.light-mode .input, body.light-mode .select {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ccc;
+}
+
+/* Styling for the Calculate BMI button */
+#calculate-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#calculate-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 15px var(--shadow-hover-color);
+    transform: translateY(-3px);
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    body {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .theme-toggle, #learn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .theme-toggle img, #learn img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .theme-toggle, #learn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .theme-toggle img, #learn img {
+        width: 18px;
+        height: 18px;
+    }
+
+    #calculate-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 0.8rem;
+    }
+
+    .container {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    .theme-toggle, #learn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .theme-toggle img, #learn img {
+        width: 15px;
+        height: 15px;
+    }
+
+    #calculate-button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}

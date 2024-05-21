@@ -1,0 +1,52 @@
+<!--This HTML file creates a BMI & Calorie Calculator webpage. Users input weight, height, age, gender, and activity level to calculate BMI and recommended calorie intake. It includes theme toggling functionality and links to learn more.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI & Calorie Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+<div class="container">
+    <a id="learn" href="WHATIS.html"> <img id="learn" src="img/learn.png"></a>
+    <h2>BMI & Calorie Calculator</h2>
+    <label for="weight">Weight:</label>
+    <input type="number" id="weight" class="input" placeholder="Enter weight">
+    <select id="weightUnit" class="select">
+        <option value="kg">kg</option>
+        <option value="lbs">lbs</option>
+    </select><br><br>
+    <label for="height">Height:</label>
+    <input type="number" id="height" class="input" placeholder="Enter height">
+    <select id="heightUnit" class="select">
+        <option value="m">m</option>
+        <option value="in">in</option>
+        <option value="cm">cm</option>
+    </select><br><br>
+    <label for="age">Age:</label>
+    <input type="number" id="age" class="input" placeholder="Enter age"><br><br>
+    <label for="gender">Gender:</label>
+    <select id="gender" class="select">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select><br><br>
+    <label for="activity">Activity Level:</label>
+    <select id="activity" class="select">
+        <option value="1.2">Sedentary (little or no exercise)</option>
+        <option value="1.375">Lightly active (light exercise/sports 1-3 days/week)</option>
+        <option value="1.55">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+        <option value="1.725">Very active (hard exercise/sports 6-7 days/week)</option>
+        <option value="1.9">Super active (very hard exercise/physical job)</option>
+    </select><br><br>
+    <button id="calculate-button" onclick="calculate()">Calculate</button><br><br>
+    <div id="result"></div>
+    <div id="explanation"></div>
+    <button class="theme-toggle" id="themeToggle">
+        <img id="themeIcon" src="img/theme.gif" alt="Toggle Theme"> 
+    </button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
